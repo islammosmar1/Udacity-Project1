@@ -249,3 +249,77 @@ footer {
 .social-icon:hover {
   transform: scale(1.2);
 }
+
+
+/* Blog Section Styles */
+.blog {
+  background-color: var(--background);
+  padding: var(--padding);
+  text-align: center;
+}
+
+.blog h2 {
+  font-size: 30px;
+  font-weight: 800;
+  color: var(--light-color);
+  padding-bottom: var(--padding);
+}
+
+.blog-cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: var(--padding);
+}
+
+.blog-card {
+  background-color: var(--main-color);
+  border-radius: 10px;
+  color: var(--background);
+  padding: 15px;
+  text-align: center;
+  width: calc(50% - var(--padding));
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease;
+}
+
+.blog-card:hover {
+  transform: translateY(-10px);
+}
+
+.blog-card img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  margin-bottom: 10px;
+}
+
+.blog-card h3 {
+  font-size: 20px;
+  color: var(--accent-color);
+}
+
+.blog-card button {
+  background-color: var(--secondary-color);
+  border: none;
+  border-radius: 5px;
+  padding: 10px;
+  color: var(--background);
+  transition: background-color 0.3s ease;
+}
+
+.blog-card button:hover {
+  background-color: var(--accent-color);
+}
+
+.blog-card button a {
+  color: var(--background);
+  font-weight: 700;
+  font-size: 14px;
+}
+
+@media (max-width: 767px) {
+  .know .cards .card, .blog-card {
+    width: 100%;
+  }
+}
