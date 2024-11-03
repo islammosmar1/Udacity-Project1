@@ -1,0 +1,251 @@
+@import url("./footer.css");
+@import url("./nav.css");
+@import url("./nav-media.css");
+@import url('https://fonts.googleapis.com/css2?family=Playwrite+GB+S:ital,wght@0,100..400;1,100..400&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --main-color: #34495e; /* لون أزرق بارد */
+  --secondary-color: #e74c3c; /* لون أحمر مشرق */
+  --background: #ecf0f1; /* لون خلفية فاتح */
+  --light-color: #2c3e50; /* لون نص غامق */
+  --accent-color: #3498db; /* لون أزرق لامع */
+  --padding: 60px;
+  --margin: 60px;
+  /* --font-family: 'Poppins', sans-serif; الخط الأساسي */
+}
+
+body {
+  font-family: "Poppins", serif;
+
+  background-color: var(--background);
+  color: var(--light-color);
+  line-height: 1.6;
+  font-family: "Playwrite GB S", cursive;
+}
+
+ul li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: var(--light-color);
+  transition: color 0.3s ease;
+}
+
+a:hover {
+  color: var(--secondary-color);
+}
+
+.container {
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+header {
+  width: 100%;
+  background-color: var(--main-color);
+  height: 220px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+header .t h1 {
+  color: var(--background);
+  margin-top: 30px;
+  text-shadow: 3px 1px 8px rgba(0, 0, 0, 0.5);
+  font-weight: 900;
+  font-size: 50px;
+  font-family: 'Montserrat', sans-serif; /* استخدام خط مختلف للعناوين */
+}
+
+header .t button {
+  margin-top: 20px;
+  color: var(--main-color);
+  padding: 20px;
+  border: var(--secondary-color) 2px solid;
+  background-color: var(--secondary-color);
+  font-weight: 900;
+  border-radius: 35px;
+  font-size: 16px;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+header .t button:hover {
+  background-color: var(--main-color);
+  color: var(--secondary-color);
+  box-shadow: 0 0 15px var(--secondary-color);
+  transform: scale(1.1);
+}
+
+.know {
+  background-color: var(--background);
+  width: 100%;
+  padding: var(--padding);
+  text-align: center;
+}
+
+.know h2 {
+  padding-bottom: var(--padding);
+  color: var(--light-color);
+  font-size: 30px;
+  font-weight: 800;
+  text-shadow: 3px 1px 8px rgba(0, 0, 0, 0.5);
+}
+
+.know .cards {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: var(--padding);
+}
+
+.know .cards .card {
+  background-color: var(--main-color);
+  border-radius: 10px;
+  border: 1px solid var(--accent-color);
+  transition: 0.5s;
+  color: var(--background);
+  text-align: center;
+  padding: 15px;
+  width: calc(50% - var(--padding));
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.know .cards .card:hover {
+  box-shadow: 0 0 45px var(--accent-color);
+  transform: translateY(-10px);
+}
+
+.know .cards .card h3 {
+  font-size: 19px;
+  font-weight: 800;
+  color: var(--accent-color);
+}
+
+.know .cards img {
+  width: 150px;
+  border-radius: 50%;
+  margin-bottom: 15px;
+}
+
+.know .cards .card button {
+  background-color: var(--secondary-color);
+  border-radius: 5px;
+  padding: 10px;
+  border: 1px solid var(--accent-color);
+  margin: 5px;
+  transition: 0.5s;
+  color: var(--background);
+}
+
+.know .cards .card button:hover {
+  box-shadow: 0 0 20px var(--accent-color);
+  background-color: var(--accent-color);
+  color: var(--main-color);
+  transform: scale(1.1);
+}
+
+.know .cards .card button a {
+  color: var(--background);
+  font-weight: 700;
+  font-size: 14px;
+  transition: color 0.3s ease;
+}
+
+.know .cards .card button:hover a {
+  color: var(--main-color);
+}
+
+/* Media Queries */
+@media (max-width: 767px) {
+  header {
+    height: 190px;
+  }
+  header .t h1 {
+    font-size: 30px;
+  }
+  header .t button {
+    padding: 10px;
+    font-size: 14px;
+  }
+  .know .cards .card {
+    width: 100%;
+    margin-bottom: 30px;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  .container {
+    width: 750px;
+  }
+  header .t h1 {
+    font-size: 40px;
+  }
+  header .t button {
+    padding: 15px;
+    font-size: 14px;
+  }
+  header {
+    height: 200px;
+  }
+  .know .cards .card {
+    width: 100%;
+    margin-bottom: 30px;
+  }
+}
+
+@media (min-width: 992px) {
+  .container {
+    width: 970px;
+  }
+  .know .cards .card {
+    width: 45%;
+  }
+}
+
+@media (min-width: 1200px) {
+  .container {
+    width: 1170px;
+  }
+  .know .cards .card {
+    width: calc(50% - var(--padding));
+  }
+}
+
+
+
+
+footer {
+  text-align: center;
+  padding: 1rem;
+  color: var(--light-color);
+}
+
+.social-links {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-bottom: 0rem;
+  bottom: 0;
+}
+
+.social-icon {
+  color: inherit; /* Use the original color of the icon */
+  font-size: 1.5rem;
+  text-decoration: none;
+  transition: transform 0.3s;
+}
+
+.social-icon:hover {
+  transform: scale(1.2);
+}
